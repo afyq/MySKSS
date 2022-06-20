@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">My SKSS</string>
+
+    <string-array name = "list1" >
+        <item>"Select Book Category"</item>
+        <item>"Science Fiction"</item>
+        <item>"Fantasy fiction"</item>
+        <item>"Magazine"</item>
+        <item>"Novel"</item>
+        <item>"Autobiography/Biography"</item>
+        <item>"adventure fiction"</item>
+        <item>"Mystery fiction"</item>
+        <item>"Others"</item>
+    </string-array>
+
+    <string-array name = "list2" >
+        <item>"Select Book Language"</item>
+        <item>"Bahasa Melayu"</item>
+        <item>"English"</item>
+        <item>"Arabic"</item>
+    </string-array>
+
+    <string-array name = "list3" >
+        <item>"Select Type of Reading Material"</item>
+        <item>"Fiction"</item>
+        <item>"Non Fiction"</item>
+        <item>"Non Book"</item>
+        <item>"Digital Material"</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/drawable/ic_stat_notification.xml" value="0.2203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_admin_add_book.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_admin_collect_fine.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_admin_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_admin_issue_book.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_admin_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_admin_reissue_book.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_admin_remove_book.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_admin_return_book.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_admin_update_book.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_nilam_record.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_search_book.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_search_book_set.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_select_user.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_student_home.xml" value="0.19655797101449277" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_student_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_student_signup.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_user_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_user_reissue_book.xml" value="0.19655797101449277" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_user_see_my_books.xml" value="0.19655797101449277" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/book_view.xml" value="0.19655797101449277" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/content_admin_ui.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/see_my_book_view.xml" value="0.19655797101449277" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
