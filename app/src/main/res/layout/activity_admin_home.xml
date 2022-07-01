@@ -32,15 +32,7 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
-                android:id="@+id/searchBook"
-                android:text="Search Book" />
-
-            <Button
-                android:layout_width="200dp"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:id="@+id/addBook"
+                android:id="@+id/BtnAddBook"
                 android:text="Add Book" />
 
             <Button
@@ -48,23 +40,15 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
-                android:id="@+id/removeBook"
-                android:text="Remove Book" />
+                android:id="@+id/BtnSearchBook"
+                android:text="Search Book" />
 
             <Button
                 android:layout_width="200dp"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
-                android:id="@+id/updateBook"
-                android:text="Update Book" />
-
-            <Button
-                android:layout_width="200dp"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:id="@+id/issueBook"
+                android:id="@+id/BtnIssueBook"
                 android:text="Issue Book to User" />
 
             <Button
@@ -72,7 +56,7 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
-                android:id="@+id/returnBook"
+                android:id="@+id/BtnReturnBook"
                 android:text="Return Book from User" />
 
             <Button
@@ -80,16 +64,7 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
-                android:id="@+id/reissueBook"
-                android:text="Re-Issue Book" />
-
-
-            <Button
-                android:layout_width="200dp"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:id="@+id/logOut"
+                android:id="@+id/BtnLogOut"
                 android:text="Log Out" />
 
         </LinearLayout>

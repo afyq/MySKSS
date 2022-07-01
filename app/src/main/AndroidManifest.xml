@@ -14,28 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MySKSS">
         <activity
-            android:name=".UserSeeMyBooks"
-            android:exported="false" />
-        <activity
-            android:name=".UserReissueBook"
-            android:exported="false" />
-        <activity
             android:name=".SearchBook"
             android:exported="false" />
         <activity
-            android:name=".SearchBookSet"
-            android:exported="false" />
-        <activity
-            android:name=".AdminUpdateBook"
-            android:exported="false" />
-        <activity
             android:name=".AdminReturnBook"
-            android:exported="false" />
-        <activity
-            android:name=".AdminRemoveBook"
-            android:exported="false" />
-        <activity
-            android:name=".AdminReissueBook"
             android:exported="false" />
         <activity
             android:name=".AdminIssueBook"

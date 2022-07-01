@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">My SKSS</string>
 
-    <string-array name = "list1" >
+    <string-array name="list1">
         <item>"Select Book Category"</item>
         <item>"Science Fiction"</item>
         <item>"Fantasy fiction"</item>
@@ -13,14 +13,14 @@
         <item>"Others"</item>
     </string-array>
 
-    <string-array name = "list2" >
+    <string-array name="list2">
         <item>"Select Book Language"</item>
         <item>"Bahasa Melayu"</item>
         <item>"English"</item>
         <item>"Arabic"</item>
     </string-array>
 
-    <string-array name = "list3" >
+    <string-array name="list3">
         <item>"Select Type of Reading Material"</item>
         <item>"Fiction"</item>
         <item>"Non Fiction"</item>

@@ -4,25 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchBook">
+    tools:context=".SearchBook"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="18dp"
-        android:text="No Such Book !"
-        android:textAlignment="center"
-
-        android:layout_marginTop="0.2in"
-        android:id="@+id/ifNoBook"
-        android:textColor="#F10A0A"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycle"
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Search Book"
+        android:id="@+id/SearchBook"/>
 
-    </androidx.recyclerview.widget.RecyclerView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/SearchBook"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Search"
+        android:id="@+id/BtnSearchBook"/>
+
+    <ListView
+        android:id="@+id/listViewBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnSearchBook"
+        android:paddingHorizontal="15dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

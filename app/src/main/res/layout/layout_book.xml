@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp" >
+
+    <TextView
+        android:id="@+id/textViewBookTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Title"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:text="Author: "
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:id="@+id/TVBookAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBookTitle"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:text="Haji Afiq"
+        android:textSize="16sp"
+        android:id="@+id/textViewBookAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBookTitle"
+        app:layout_constraintStart_toEndOf="@+id/TVBookAuthor"/>
+
+    <TextView
+        android:text="Publisher: "
+        android:textSize="16sp"
+        android:id="@+id/TVBookPublisher"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBookAuthor"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:text="Iman Publication"
+        android:textSize="16sp"
+        android:id="@+id/textViewBookPublisher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBookAuthor"
+        app:layout_constraintStart_toEndOf="@+id/TVBookPublisher"/>
+
+    <TextView
+        android:text="Genre: "
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:id="@+id/TVBookGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/TVBookPublisher"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:text="Religous"
+        android:textSize="16sp"
+        android:id="@+id/textViewBookGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/TVBookPublisher"
+        app:layout_constraintStart_toEndOf="@+id/TVBookAuthor"/>
+
+    <TextView
+        android:text="Page: "
+        android:textSize="16sp"
+        android:id="@+id/TVBookPage"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/TVBookGenre"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:text="125"
+        android:textSize="16sp"
+        android:id="@+id/textViewBookPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/TVBookGenre"
+        app:layout_constraintStart_toEndOf="@+id/TVBookPage"/>
+
+    <TextView
+        android:text="ISBN No.: "
+        android:textSize="16sp"
+        android:id="@+id/TVBookISBNNo"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/TVBookPage"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:text="123456789"
+        android:textSize="16sp"
+        android:id="@+id/textViewBookISBNNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/TVBookPage"
+        app:layout_constraintStart_toEndOf="@+id/TVBookISBNNo"/>
+
+    <TextView
+        android:text="Availability: "
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:id="@+id/TVAvailability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/TVBookISBNNo"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:text="8"
+        android:textSize="16sp"
+        android:id="@+id/textViewAvailability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/TVBookISBNNo"
+        app:layout_constraintStart_toEndOf="@+id/TVAvailability"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

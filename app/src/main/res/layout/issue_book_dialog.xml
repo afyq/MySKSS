@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginVertical="30dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter student name"
+        android:id="@+id/ETIssueStudent"
+        android:inputType="text"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Issue Book"
+        android:layout_marginTop="10dp"
+        android:id="@+id/BtnIssueBook"/>
+
+    <TextView
+        android:id="@+id/TVUnavailable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The book is unavailable"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"/>
+
+</LinearLayout>

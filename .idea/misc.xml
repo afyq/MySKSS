@@ -3,9 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/drawable/close.xml" value="0.2203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/drawable/ic_stat_notification.xml" value="0.2203125" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_admin_add_book.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_admin_add_book.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_admin_collect_fine.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_admin_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_admin_issue_book.xml" value="0.2006340579710145" />
@@ -27,6 +28,11 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/activity_user_see_my_books.xml" value="0.19655797101449277" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/book_view.xml" value="0.19655797101449277" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/content_admin_ui.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/edit_book_dialog.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/issue_book_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/layout_book.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/layout_issue.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/return_dialog.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MySKSS/app/src/main/res/layout/see_my_book_view.xml" value="0.19655797101449277" />
       </map>
     </option>

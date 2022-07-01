@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -22,157 +23,90 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class AdminAddBook extends AppCompatActivity implements View.OnClickListener {
+public class AdminAddBook extends AppCompatActivity {
 
-    private TextInputLayout editTitle;
-    private TextInputLayout editBid;
-    private TextInputLayout editUnits;
-    private Spinner spinner1;
-    private FirebaseFirestore db;
-    Button button1;
-    String type;
+    TextInputLayout BookTitle, BookAuthor, BookPublisher, BookGenre, BookPage, BookISBNNo, Availability;
+    Button BtnAddBook;
+    DatabaseReference databaseBook;
     ProgressDialog p1;
-
-    DatabaseReference databasebook;
+    String type;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_add_book);
 
-        FirebaseApp.initializeApp(this);
+        databaseBook = FirebaseDatabase.getInstance().getReference("Book");
 
-        editTitle = (TextInputLayout)findViewById(R.id.editTitle);
-        editBid = (TextInputLayout) findViewById(R.id.editBid);
-        editUnits = (TextInputLayout)findViewById(R.id.editUnits);
-        spinner1 = (Spinner)findViewById(R.id.spinner1);
-        button1 = (Button)findViewById(R.id.button1);
-        p1 = new ProgressDialog(this);
-        p1.setCancelable(false);
+        BookTitle = findViewById(R.id.BookTitle);
+        BookAuthor = findViewById(R.id.BookAuthor);
+        BookPublisher = findViewById(R.id.BookPublisher);
+        BookGenre = findViewById(R.id.BookGenre);
+        BookPage = findViewById(R.id.BookPage);
+        BookISBNNo = findViewById(R.id.BookISBNNo);
+        Availability = findViewById(R.id.Availability);
+        BtnAddBook = findViewById(R.id.BtnAddBook);
 
-        db = FirebaseFirestore.getInstance();
-
-
-        String A [] = getResources().getStringArray(R.array.list1);
-        ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item, A);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(adapter);
-        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        BtnAddBook.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                type = parent.getItemAtPosition(position).toString();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
+            public void onClick(View v) {
+                addBook();
             }
         });
-
-        button1.setOnClickListener(this);
-    }
-
-    private boolean verifyTitle() {
-        String t = editTitle.getEditText().getText().toString().trim();
-        if (t.isEmpty()) {
-            editTitle.setErrorEnabled(true);
-            editTitle.setError("Title Required!");
-            return true;
-        } else {
-            editTitle.setErrorEnabled(false);
-            return false;
-        }
-    }
-
-    private boolean verifyBid() {
-        String b = editBid.getEditText().getText().toString().trim();
-        if (b.isEmpty()) {
-            editBid.setErrorEnabled(true);
-            editBid.setError("Book Id Required!");
-            return true;
-        } else {
-            editBid.setErrorEnabled(false);
-            return false;
-        }
-    }
-
-    private boolean verifyUnits() {
-        String u = editUnits.getEditText().getText().toString().trim();
-        if (u.isEmpty()) {
-            editUnits.setErrorEnabled(true);
-            editUnits.setError("No. of Units Required!");
-            return true;
-        } else {
-            editUnits.setErrorEnabled(false);
-            return false;
-        }
-    }
-
-    private boolean verifyCategory() {
-        if (type.equals("Select Book Category")) {
-            Toast.makeText(this, "Please select Book Category!", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-        return false;
     }
 
     private void addBook() {
+        String id = databaseBook.push().getKey();
+        String title = BookTitle.getEditText().getText().toString().trim();
+        String author = BookAuthor.getEditText().getText().toString().trim();
+        String publisher = BookPublisher.getEditText().getText().toString().trim();
+        String genre = BookGenre.getEditText().getText().toString().trim(); //tuka nilai
+        int page = Integer.parseInt(BookPage.getEditText().getText().toString().trim());
+        int ISBN = Integer.parseInt(BookISBNNo.getEditText().getText().toString().trim());
+        int available = Integer.parseInt(Availability.getEditText().getText().toString().trim());
 
-        boolean res = (verifyBid() | verifyTitle() | verifyUnits() | verifyCategory());
-        if (res == true) {
+        if(TextUtils.isEmpty(title)){
+            Toast.makeText(this,"Please insert book title",Toast.LENGTH_LONG).show();
             return;
-        } else {
-
-            p1.setMessage("Adding Book");
-            p1.show();
-
-            final String id = editBid.getEditText().getText().toString().trim();
-            int id1 = Integer.parseInt(id);
-
-            db.document("Book/"+id1).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                @Override
-                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                    if ((task.isSuccessful()) && (task.getResult().exists() == false)) {
-                        String id = editBid.getEditText().getText().toString().trim();
-                        String title = editTitle.getEditText().getText().toString().trim();
-                        String units = editUnits.getEditText().getText().toString().trim();
-                        int id1 = Integer.parseInt(id),unit1 = Integer.parseInt(units);
-
-                        Book b = new Book(title.toUpperCase(), type, unit1, id1);
-
-                        db.document("Book/" + id1).set(b).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if(task.isSuccessful()) {
-                                    p1.cancel();
-                                    Toast.makeText(AdminAddBook.this, "Book Added!", Toast.LENGTH_SHORT).show();
-                                } else {
-                                    p1.cancel();
-                                    Toast.makeText(AdminAddBook.this, "Try Again!", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
-                    } else {
-                        p1.cancel();
-                        Toast.makeText(AdminAddBook.this, "This Book is already added \n or Bad Connection!", Toast.LENGTH_SHORT).show();
-
-                    }
-                }
-            });
-
         }
-    }
+        if(TextUtils.isEmpty(author)){
+            Toast.makeText(this,"Please insert author name",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(TextUtils.isEmpty(publisher)){
+            Toast.makeText(this,"Please insert publisher name",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(TextUtils.isEmpty(genre)){
+            Toast.makeText(this,"Please insert book genre",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(page == 0){
+            Toast.makeText(this,"Please insert book page",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(ISBN == 0){
+            Toast.makeText(this,"Please insert book ISBN No.",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(available == 0){
+            Toast.makeText(this,"Please insert no. of units",Toast.LENGTH_LONG).show();
+            return;
+        }
 
-    @Override
-    public void onBackPressed() {
-        finish();
-        super.onBackPressed();
+        Book book = new Book(id, title, author, publisher, genre, page, ISBN, available);
 
-    }
+        databaseBook.child(id).setValue(book);
 
-    @Override
-    public void onClick(View v) {
-        addBook();
+        BookTitle.getEditText().getText().clear();
+        BookAuthor.getEditText().getText().clear();
+        BookPublisher.getEditText().getText().clear();
+        BookGenre.getEditText().getText().clear();
+        BookPage.getEditText().getText().clear();
+        BookISBNNo.getEditText().getText().clear();
+        Availability.getEditText().getText().clear();
+
+        Toast.makeText(this, "Book added", Toast.LENGTH_LONG).show();
     }
 
 }

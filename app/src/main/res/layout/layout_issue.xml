@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp" >
+
+    <TextView
+        android:id="@+id/textViewBookTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Title"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:text="Borrower: "
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:id="@+id/TVIssueName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBookTitle"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:text="Haji Afiq"
+        android:textSize="16sp"
+        android:id="@+id/textViewIssueName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBookTitle"
+        app:layout_constraintStart_toEndOf="@+id/TVIssueName"/>
+
+    <TextView
+        android:text="Issue Date: "
+        android:textSize="16sp"
+        android:id="@+id/TVIssueDate"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIssueName"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:text="25/2/2021"
+        android:textSize="16sp"
+        android:id="@+id/textViewIssueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIssueName"
+        app:layout_constraintStart_toEndOf="@+id/TVIssueDate"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

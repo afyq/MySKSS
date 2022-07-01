@@ -11,75 +11,55 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class AdminHome extends AppCompatActivity implements View.OnClickListener {
+public class AdminHome extends AppCompatActivity {
 
-    private Button searchBook,addBook,removeBook,updateBook,issueBook,returnBook,logOut,reissueButton;
-    private FirebaseAuth mAuth;
-    private FirebaseFirestore firebaseFirestore;
+    private Button BtnAddBook, BtnSearchBook, BtnIssueBook, BtnReturnBook, BtnStudent,BtnLogOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
 
-        FirebaseApp.initializeApp(this);
-        mAuth =FirebaseAuth.getInstance();
-        searchBook=(Button)findViewById(R.id.searchBook);
-        addBook=(Button)findViewById(R.id.addBook);
-        removeBook=(Button)findViewById(R.id.removeBook);
-        updateBook=(Button)findViewById(R.id.updateBook);
-        issueBook=(Button)findViewById(R.id.issueBook);
-        returnBook=(Button)findViewById(R.id.returnBook);
-        logOut=(Button)findViewById(R.id.logOut);
-        reissueButton=(Button)findViewById(R.id.reissueBook);
-        firebaseFirestore =FirebaseFirestore.getInstance();
+        BtnAddBook = findViewById(R.id.BtnAddBook);
+        BtnSearchBook = findViewById(R.id.BtnSearchBook);
+        BtnIssueBook = findViewById(R.id.BtnIssueBook);
+        BtnReturnBook = findViewById(R.id.BtnReturnBook);
+        BtnLogOut = findViewById(R.id.BtnLogOut);
 
-        searchBook.setOnClickListener(this);
-        addBook.setOnClickListener(this);
-        removeBook.setOnClickListener(this);
-        updateBook.setOnClickListener(this);
-        issueBook.setOnClickListener(this);
-        returnBook.setOnClickListener(this);
-        logOut.setOnClickListener(this);
-        reissueButton.setOnClickListener(this);
-    }
+        BtnAddBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminHome.this, AdminAddBook.class));
+            }
+        });
 
-    @Override
-    public void onClick(View v) {
-        if (v == logOut) {
-            mAuth.signOut();
-            finish();
-            startActivity(new Intent(AdminHome.this, SelectUser.class));
-        }
+        BtnSearchBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminHome.this, SearchBook.class));
+            }
+        });
 
-        if(v == searchBook){
-            startActivity(new Intent(getApplicationContext(), SearchBookSet.class));
-        }
+        BtnIssueBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminHome.this, AdminIssueBook.class));
+            }
+        });
 
-        if(v == addBook) {
-            startActivity(new Intent(getApplicationContext(), AdminAddBook.class));
-        }
+        BtnReturnBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminHome.this, AdminReturnBook.class));
+            }
+        });
 
-        if(v == removeBook) {
-            startActivity(new Intent(getApplicationContext(), AdminRemoveBook.class));
-        }
-
-        if(v == issueBook) {
-            startActivity(new Intent(getApplicationContext(), AdminIssueBook.class));
-        }
-
-        if(v == returnBook) {
-            startActivity(new Intent(getApplicationContext(), AdminReturnBook.class));
-        }
-
-        if(v == updateBook) {
-            startActivity(new Intent(getApplicationContext(), AdminUpdateBook.class));
-        }
-
-        if(v == reissueButton) {
-            startActivity(new Intent(getApplicationContext(), AdminReissueBook.class));
-        }
-
+        BtnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminHome.this, SelectUser.class));
+            }
+        });
     }
 
 }

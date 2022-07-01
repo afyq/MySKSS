@@ -1,73 +1,59 @@
 package com.example.myskss;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Book {
+    private String bookId;
+    private String bookTitle;
+    private String bookAuthor;
+    private String bookPublisher;
+    private String bookGenre;
+    private int bookPage;
+    private int bookISBNNo;
+    private int bookAvailability;
 
-    private String title, type;
-    private int total = 0, available = 0, id;
-    private List<Integer> unit = new ArrayList<Integer>();
-
-
-    public Book() {
+    public Book(){
+        //this constructor is required
     }
 
-    public Book(String title, String type, int total, int id) {
-        this.title = title;
-        this.type = type;
-        this.total = total;
-        this.id = id;
-        this.available = total;
+    public Book(String bookId, String bookTitle, String bookAuthor, String bookPublisher, String bookGenre, int bookPage, int bookISBNNo, int bookAvailability) {
+        this.bookId = bookId;
+        this.bookTitle = bookTitle;
+        this.bookAuthor = bookAuthor;
+        this.bookPublisher = bookPublisher;
+        this.bookGenre = bookGenre;
+        this.bookPage = bookPage;
+        this.bookISBNNo = bookISBNNo;
+        this.bookAvailability = bookAvailability;
     }
 
-
-    public String getTitle() {
-        return title;
+    public String getBookId() {
+        return bookId;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getBookTitle() {
+        return bookTitle;
     }
 
-    public String getType() {
-        return type;
+    public String getBookAuthor() {
+        return bookAuthor;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public String getBookPublisher() {
+        return bookPublisher;
     }
 
-    public int getTotal() {
-        return total;
+    public String getBookGenre() {
+        return bookGenre;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
+    public int getBookPage() {
+        return bookPage;
     }
 
-    public int getAvailable() {
-        return available;
+    public int getBookISBNNo() {
+        return bookISBNNo;
     }
 
-    public void setAvailable(int available) {
-        this.available = available;
+    public int getBookAvailability() {
+        return bookAvailability;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public List<Integer> getUnit() {
-        return unit;
-    }
-
-    public void setUnit(List<Integer> unit) {
-        this.unit = unit;
-    }
-
 }

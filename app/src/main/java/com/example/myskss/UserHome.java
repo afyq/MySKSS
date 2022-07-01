@@ -53,18 +53,6 @@ public class UserHome extends AppCompatActivity implements View.OnClickListener 
 
         }
 
-        if(v == searchBook1) {
-            startActivity(new Intent(getApplicationContext(), SearchBookSet.class));
-        }
-
-        if (v == seeBook) {
-            startActivity(new Intent(getApplicationContext(), UserSeeMyBooks.class));
-        }
-
-        if(v == buttonReissue) {
-            startActivity(new Intent(getApplicationContext(), UserReissueBook.class));
-        }
-
     }
 
 }
